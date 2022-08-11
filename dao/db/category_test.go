@@ -21,9 +21,9 @@ func TestGetCategoryById(t *testing.T) {
 }
 
 func TestGetCategoryList(t *testing.T) {
-	//var categoryIds []int64
-	//categoryIds = append(categoryIds, 1, 2, 3)
-	categoryList, err := GetCategoryList(1, 2, 3)
+	var categoryIds []int64
+	categoryIds = append(categoryIds, 1, 2, 3)
+	categoryList, err := GetCategoryList(categoryIds)
 	if err != nil {
 		panic(err)
 	}

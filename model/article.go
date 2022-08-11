@@ -7,9 +7,9 @@ type ArticleInfo struct {
 	Id         int64 `db:"id"`
 	CategoryId int64 `db:"category_id"`
 	// 文章摘要
-	Summary   int64 `db:"summary"`
-	title     int64 `db:"title"`
-	ViewCount int64 `db:"view_count"`
+	Summary   string `db:"summary"`
+	Title     string `db:"title"`
+	ViewCount uint32 `db:"view_count"`
 	// 时间
 	CreateTime   time.Time `db:"create_time"`
 	CommentCount uint32    `db:"comment_count"`

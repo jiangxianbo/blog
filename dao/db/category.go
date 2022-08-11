@@ -25,8 +25,7 @@ func GetCategoryById(id int64) (category *model.Category, err error) {
 }
 
 // GetCategoryList 查询多个
-// func GetCategoryList(categoryIds []int64) (categoryList []*model.Category, err error) {
-func GetCategoryList(categoryIds ...int64) (categoryList []*model.Category, err error) {
+func GetCategoryList(categoryIds []int64) (categoryList []*model.Category, err error) {
 	// 构建sql
 	sqlStr, args, err := sqlx.In("SELECT `id`,`category_name`,`category_no` FROM `category` WHERE `id` in (?)", categoryIds)
 	if err != nil {
