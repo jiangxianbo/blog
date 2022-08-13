@@ -2,7 +2,6 @@ package db
 
 import (
 	"blog/model"
-	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -74,7 +73,6 @@ func GetArticleListByCategoryId(categoryId int64, pageNum, pageSize int) (articl
 			    status = 1
 			ORDER BY create_time DESC
 			limit ?,?`
-	fmt.Println(sqlStr)
 	err = DB.Select(&articleList, sqlStr, categoryId, pageNum, pageSize)
 	return
 }

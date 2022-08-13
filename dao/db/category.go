@@ -36,7 +36,7 @@ func GetCategoryList(categoryIds []int64) (categoryList []*model.Category, err e
 	return
 }
 
-// 获取所有分类
+// GetAllCategoryList 获取所有分类
 func GetAllCategoryList() (categoryList []*model.Category, err error) {
 	// 构建sql
 	sqlStr := "SELECT `id`,`category_name`,`category_no` FROM `category` ORDER BY category_no ASC"
