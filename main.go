@@ -19,6 +19,7 @@ func main() {
 	router.LoadHTMLGlob("views/*")
 	router.GET("/", controller.IndexHandler)
 	router.GET("/category", controller.CategoryList)
+
 	articleGroup := router.Group("/article")
 	{
 		articleGroup.GET("/detail", controller.ArticleDetail)
